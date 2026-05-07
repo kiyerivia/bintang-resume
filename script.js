@@ -1,15 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.getElementById('main-nav');
     const reveals = document.querySelectorAll('.reveal');
-
-    // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    });
+    const navDots = document.querySelectorAll('.nav-dot');
+    const sections = document.querySelectorAll('section, article, div[id]');
 
     // Reveal Animation on Scroll
     const revealObserver = new IntersectionObserver((entries) => {
@@ -24,7 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(el => revealObserver.observe(el));
 
-    // Form Handling (Mock)
+    // Floating Nav Active State Update
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navDots.forEach(dot => {
+            dot.classList.remove('active');
+            if (dot.getAttribute('href').includes(current)) {
+                dot.classList.add('active');
+            }
+        });
+    });
+
+    // Form Handling
     const form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -32,24 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = form.querySelector('button');
             const originalText = btn.innerText;
             
-            btn.innerText = 'Terkirim! ✨';
-            btn.style.background = 'var(--accent-secondary)';
+            btn.innerText = 'DATA SENT ✨';
+            btn.style.borderColor = '#44ff44';
+            btn.style.color = '#44ff44';
             
             setTimeout(() => {
                 btn.innerText = originalText;
-                btn.style.background = 'linear-gradient(45deg, var(--accent-primary), var(--accent-secondary))';
+                btn.style.borderColor = 'var(--accent-gold)';
+                btn.style.color = 'var(--accent-gold)';
                 form.reset();
             }, 3000);
         });
     }
 
-    // Custom Mouse Glow Effect (Optional addition for "Wow" factor)
-    const glow1 = document.querySelector('.glow-spot:nth-child(2)');
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        
-        // Subtly move one of the glow spots with the mouse
-        glow1.style.transform = `translate(${(x - window.innerWidth/2) * 0.05}px, ${(y - window.innerHeight/2) * 0.05}px)`;
+    // Tabs functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
     });
 });

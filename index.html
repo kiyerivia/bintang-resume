@@ -3,108 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bintang | Creative Developer Portfolio</title>
-    <meta name="description" content="Portfolio online Bintang - Developer & Creative Tech Enthusiast. Membangun pengalaman digital yang luar biasa.">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bintang | Creative Developer Portfolio">
-    <meta property="og:description" content="Membangun pengalaman digital yang luar biasa dengan sentuhan teknologi modern.">
-    
+    <title>Bintang | HoYoWiki Developer Entry</title>
+    <meta name="description" content="Entry data untuk Bintang - Developer & Creative Tech Enthusiast dalam format wiki.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars-overlay"></div>
-    <div class="glow-spot" style="top: 10%; right: -10%;"></div>
-    <div class="glow-spot" style="bottom: 20%; left: -10%; background: var(--accent-secondary);"></div>
+    <header>
+        <div class="wiki-logo">BINTANG WIKI</div>
+    </header>
 
-    <nav id="main-nav">
-        <div class="container nav-content">
-            <div class="logo">BINTANG.</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
+    <!-- Floating Pill Navigation -->
+    <nav class="floating-nav">
+        <a href="#about" class="nav-dot active" title="About"></a>
+        <a href="#stats" class="nav-dot" title="Stats"></a>
+        <a href="#projects" class="nav-dot" title="Projects"></a>
+        <a href="#contact" class="nav-dot" title="Contact"></a>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <h1 class="reveal">
-                    <span class="gradient-text">Stellar</span>
-                    Experiences.
-                </h1>
-                <p class="reveal">Saya Bintang, seorang Developer yang berfokus pada pembuatan antarmuka digital yang memukau dan fungsional.</p>
-                <div class="reveal">
-                    <a href="#projects" class="btn btn-primary">Lihat Karya Saya</a>
-                </div>
-                <div class="scroll-indicator" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
-                    <span style="font-size: 2rem; opacity: 0.5;">↓</span>
-                </div>
-            </div>
-        </section>
+    <main class="wiki-container">
+        <!-- Entry Hero -->
+        <article class="entry-card reveal">
+            <div class="entry-banner" style="background-image: url('assets/hero-bg.png');"></div>
+            <div class="entry-content">
+                <div class="entry-main">
+                    <p class="entry-label">Creative Developer Entry</p>
+                    <h1 class="entry-title">Bintang</h1>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px;">
+                        Seorang pengembang teknologi yang berdedikasi untuk menciptakan pengalaman digital yang harmonis antara estetika dan fungsionalitas. 
+                        Memiliki spesialisasi dalam pengembangan antarmuka modern dengan sentuhan artistik.
+                    </p>
+                    
+                    <div class="wiki-tabs">
+                        <button class="tab-btn active">Overview</button>
+                        <button class="tab-btn">Abilities</button>
+                        <button class="tab-btn">Story</button>
+                    </div>
 
-        <!-- Skills Section -->
-        <section id="skills" style="background: rgba(255,255,255,0.02);">
-            <div class="container">
-                <h2 class="section-title reveal">My Expertise</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                    <span class="glass-card reveal" style="padding: 1rem 2rem;">Frontend Development</span>
-                    <span class="glass-card reveal" style="padding: 1rem 2rem;">UI/UX Design</span>
-                    <span class="glass-card reveal" style="padding: 1rem 2rem;">Backend Integration</span>
-                    <span class="glass-card reveal" style="padding: 1rem 2rem;">Mobile Apps</span>
-                    <span class="glass-card reveal" style="padding: 1rem 2rem;">Cloud Deployment</span>
+                    <div id="about">
+                        <h3 style="color: var(--accent-gold); margin-bottom: 10px;">Description</h3>
+                        <p>Bintang adalah seorang developer yang menggabungkan logika pemrograman dengan visi desain yang kuat. Terinspirasi oleh keindahan alam semesta dan teknologi masa depan.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
+                <!-- Attribute Sidebar -->
+                <aside class="attr-box" id="stats">
+                    <h3 style="margin-bottom: 15px; font-size: 1rem; border-left: 3px solid var(--accent-gold); padding-left: 10px;">Attributes</h3>
+                    <div class="attr-item">
+                        <span class="attr-key">Level</span>
+                        <span class="attr-val">90 / 90</span>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-key">Element</span>
+                        <span class="attr-val">Stellar</span>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-key">Affiliation</span>
+                        <span class="attr-val">Independent</span>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-key">Focus</span>
+                        <span class="attr-val">Web & UI/UX</span>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-key">Constellation</span>
+                        <span class="attr-val">Creative Genius</span>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
+        <div class="ornate-divider reveal">
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Featured Projects Section -->
         <section id="projects">
-            <div class="container">
-                <h2 class="section-title reveal">Featured Projects</h2>
-                <div class="portfolio-grid">
-                    <div class="glass-card reveal">
-                        <h3>Penerbit Saka</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Website publishing modern dengan sistem manajemen konten kustom.</p>
-                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View Detail</a>
+            <h2 class="section-title reveal" style="text-align: center; margin-bottom: 40px; color: var(--accent-gold);">Featured Creations</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="entry-card reveal" style="margin-bottom: 0;">
+                    <div style="height: 180px; background: #222; position: relative;">
+                         <div style="position: absolute; bottom: 10px; left: 10px; background: var(--accent-gold); color: black; padding: 2px 10px; font-size: 0.7rem; font-weight: bold; border-radius: 4px;">WEB</div>
                     </div>
-                    <div class="glass-card reveal">
-                        <h3>SIKADERCANTIK</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Aplikasi manajemen data kesehatan terintegrasi untuk posyandu.</p>
-                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View Detail</a>
+                    <div style="padding: 20px;">
+                        <h4 style="color: var(--accent-beige);">Penerbit Saka</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Modern publishing system.</p>
                     </div>
-                    <div class="glass-card reveal">
-                        <h3>Nebula Dashboard</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Visualisasi data analitik dengan estetika glassmorphism.</p>
-                        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">View Detail</a>
+                </div>
+                <div class="entry-card reveal" style="margin-bottom: 0;">
+                    <div style="height: 180px; background: #222; position: relative;">
+                        <div style="position: absolute; bottom: 10px; left: 10px; background: var(--accent-gold); color: black; padding: 2px 10px; font-size: 0.7rem; font-weight: bold; border-radius: 4px;">APP</div>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h4 style="color: var(--accent-beige);">SIKADERCANTIK</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Health management system.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="container" style="max-width: 800px;">
-                <div class="glass-card reveal" style="text-align: center;">
-                    <h2 class="section-title" style="margin-bottom: 1rem;">Let's Build Something Great</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Tertarik untuk bekerja sama? Hubungi saya kapan saja.</p>
-                    <form id="contact-form" style="display: grid; gap: 1rem; text-align: left;">
-                        <input type="text" placeholder="Nama Anda" style="padding: 1rem; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;">
-                        <input type="email" placeholder="Email Anda" style="padding: 1rem; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;">
-                        <textarea placeholder="Pesan" rows="5" style="padding: 1rem; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;"></textarea>
-                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-                    </form>
-                </div>
+        <section id="contact" style="margin-top: 80px; padding-bottom: 100px;">
+            <div class="entry-card reveal" style="padding: 40px; text-align: center;">
+                <h2 style="color: var(--accent-gold); margin-bottom: 20px;">Send a Message</h2>
+                <form id="contact-form" style="display: grid; gap: 15px; max-width: 600px; margin: 0 auto; text-align: left;">
+                    <input type="text" placeholder="Name" style="padding: 12px; border-radius: 8px; background: #111; border: var(--border-soft); color: white;">
+                    <input type="email" placeholder="Email" style="padding: 12px; border-radius: 8px; background: #111; border: var(--border-soft); color: white;">
+                    <textarea placeholder="Message" rows="4" style="padding: 12px; border-radius: 8px; background: #111; border: var(--border-soft); color: white;"></textarea>
+                    <button type="submit" class="tab-btn active" style="width: 100%; font-weight: bold; font-size: 1rem;">SUBMIT DATA</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border);">
-        <p style="color: var(--text-muted);">&copy; 2026 Bintang. All rights reserved.</p>
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid #333; font-size: 0.8rem; color: var(--text-muted);">
+        &copy; 2026 Bintang Wiki Entries. Based on HoYoWiki Aesthetics.
     </footer>
 
     <script src="script.js"></script>
